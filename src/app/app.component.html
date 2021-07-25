@@ -1,3 +1,36 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu class="ion-menu" contentId="menu-content" menuId="menu-content" side="start" type="overlay">
+    <!-- <ion-header>
+      <ion-toolbar>
+        <ion-title>welcome menu</ion-title>
+      </ion-toolbar>
+    </ion-header> -->
+    <ion-content class="page-background">
+      <div class="content">
+        <div class="container">
+          <div class="header">
+            <img src="assets/images/music2.png"/>
+          </div>
+        </div>
+        <div class="all-menu" style="padding-top:20px" (click)="onMenuClick()">
+          
+          <!-- <div class="notifications" (click)="goHome()">
+            <div class="item1">Home</div>
+            <div class="edit-icon2"><ion-icon name="home"></ion-icon></div>
+          </div> -->
+          <div class="notifications" menu-close (click)="findEvent()">
+            <div class="item1">Search for Event</div>
+            <div class="edit-icon2"><ion-icon name="search-outline"></ion-icon></div>
+          </div>
+
+          <div class="notifications"  (click)="about()">
+            <div class="item1">About</div>
+            <div class="edit-icon2"><ion-icon name="checkbox-outline"></ion-icon></div>
+          </div>
+  
+        </div>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menu-content"></ion-router-outlet>
 </ion-app>

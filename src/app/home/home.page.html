@@ -1,20 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-slides pager="true">
+    
+    <ion-slide>
+      <div>
+        <img src="assets/images/music2.png" alt="logo">
+        <h3>One stop Arena for all upcoming music events</h3>
+        <p style="font-size:20px">Enjoy latest musical event<br> on the go</p>
+      </div>
+    </ion-slide>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-slide>
+      <div>
+        <img src="assets/images/music4.png" alt="logo">
+        <h3>Latest Hit Jams</h3>
+        <p style="font-size: 20px;">Find and discover on hotMuzikArena<br> latest hiphop singles</p>
+      </div>
+    </ion-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-slide>
+      <div>
+        <img src="assets/images/music5.png" alt="logo">
+        <h3>Keep your playlist save</h3>
+        <p style="font-size: 20px;">Add and manage your playlist</p>
+      </div>
+      <ion-button (click)="goToDashboard()" expand="block">Continue</ion-button>
+    </ion-slide>
+    
+  </ion-slides>
 </ion-content>

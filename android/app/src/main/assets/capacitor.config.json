@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "hotMuzikArena",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

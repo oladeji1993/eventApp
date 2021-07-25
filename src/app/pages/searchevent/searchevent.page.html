@@ -1,0 +1,55 @@
+
+<!-- <div class="dash-head">
+  <ion-button class="btnn" fill="clear" ><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+  <ion-button fill="clear"><ion-icon name="menu-outline"></ion-icon></ion-button>
+</div> -->
+<ion-content>
+  <div class="dashboard-container">
+    <div class="icon-div">
+      <div class="back-icon" (click)="goToDashboard()"><ion-icon name="arrow-back-outline"></ion-icon></div>
+      <div class="menu-icon" (click)="toggleMenu()"><ion-icon name="menu-outline"></ion-icon></div>
+    </div>
+    <div class="header-container">
+      <div class="payment-header">
+        <ion-item lines="none" class="search-bar">
+          <ion-icon name="search-outline"></ion-icon>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" [(ngModel)]="term" placeholder="Type here"></ion-input>
+        </ion-item>
+        <div style="font-size:20px">Search for an Event</div>
+      </div>
+      <!-- <div class="search-div">
+        <ion-item lines="none" class="search-bar">
+          <ion-icon name="search-outline"></ion-icon>&nbsp;&nbsp;&nbsp;
+          <ion-input type="text" placeholder="Adobe"></ion-input>
+        </ion-item>
+      </div> -->
+    </div>
+    <div class="payment-info scrollable"  scrollY="true">
+      <div class="bar-container">
+        <div class="bar"></div>
+      </div>
+  
+      <div class="web-container" *ngFor="let event of events | filter:term">
+        <h4 style="padding-top:10px;font-weight: 600;">EVENT DESCRIPTION</h4>
+        <!-- <div class="hours">{{event.artist.thumb_url}}</div> -->
+        <div class="content">
+          <div class="w-design" style="font-size:16px">{{event.description}}</div>
+          <div class="hours"></div>
+        </div>
+
+        <div class="container2" style="margin-top:15%">
+          <h4 style="font-weight: 600; font-style: underline;">EVENT LOCATION DETAILS</h4>
+          <div class="add-icon"><b>Date:&nbsp;&nbsp;</b>{{event.datetime}}</div>
+          <div class="old-price"><b>Country:&nbsp;&nbsp;</b>{{event.venue.country}}, {{event.venue.city}}</div>
+          <div class="old-price"><b>NAME: &nbsp;&nbsp;</b> {{event.venue.name}}</div>
+        </div>
+
+        <div class="container2" style="margin-top:15%">
+          <h4 style="font-weight: 600;">EVENT LINEUP ARTISTS</h4>
+          <div style="padding-bottom:10px; font-size:17px"  class="add-icon">{{event.lineup}}, {{event.lineup[1]}},{{event.lineup[2]}} </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</ion-content>
